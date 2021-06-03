@@ -14,17 +14,20 @@ namespace HomeTask
         /// <param name="args">arrayStack - an object of type Stack.</param>
         public static void Main(string[] args)
         {
-            var arrayStack = new Stack<string>();
-            arrayStack.Push("First element");
-            arrayStack.Push("Second element");
-            arrayStack.Push("Third element");
+            var products = new DataStore();
+            products.Add("iPhone");
+            products.Add("iMac");
+            products.Add("headphones");
 
-            Console.WriteLine(arrayStack.Peek());
+            Console.WriteLine($"Количество товара {products.Count()}");
+            products.Print();
 
-            arrayStack.Pop();
-            arrayStack.Push("Last element");
+            products.Remove("iMac");
+            products.Add("Xiaomi");
 
-            Console.WriteLine(arrayStack.Peek());
+            Console.WriteLine($"Количество товара {products.Count()}");
+            products.Print();
+
         }
     }
 }
