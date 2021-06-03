@@ -9,22 +9,16 @@ namespace HomeTask
     public class Program
     {
         /// <summary>
-        /// Class Program.
+        /// Week.
         /// </summary>
-        /// <param name="args">arrayStack - an object of type Stack.</param>
+        /// <param name="args">week.</param>
         public static void Main(string[] args)
         {
-            var arrayStack = new Stack<string>();
-            arrayStack.Push("First element");
-            arrayStack.Push("Second element");
-            arrayStack.Push("Third element");
-
-            Console.WriteLine(arrayStack.Peek());
-
-            arrayStack.Pop();
-            arrayStack.Push("Last element");
-
-            Console.WriteLine(arrayStack.Peek());
+            Week week = new Week();
+            foreach (string day in week)
+            {
+                Console.WriteLine(day);
+            }
         }
     }
 }
